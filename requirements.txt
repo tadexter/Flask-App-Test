@@ -1,16 +1,9 @@
 fake-useragent
-python-dotenv
 aiohttp-socks
 curl-cffi
-supabase
-telethon
-pyrogram
-tgcrypto
 requests
 aiohttp
 uvloop
+flask
 httpx
-faker
-pytz
 bs4
-dub

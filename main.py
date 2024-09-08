@@ -1,16 +1,27 @@
-# This is a sample Python script.
+from flask import Flask, request, jsonify
+import requests
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+app = Flask(__name__)
 
 
-# Press the green button in the gutter to run the script.
+@app.route('/fetch', methods=['GET'])
+def fetch_website():
+    # Get the URL from the query parameters
+    url = request.args.get('url')
+
+    if not url:
+        return jsonify({'error': 'URL is required'}), 400
+
+    try:
+        # Make a GET request to the provided URL
+        response = requests.get(url)
+        response.raise_for_status()  # Raise an error for bad status codes
+
+        # Return the content of the website
+        return response.text, 200
+    except requests.exceptions.RequestException as e:
+        return jsonify({'error': str(e)}), 500
+
+
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    app.run(debug=True)
