@@ -1,6 +1,7 @@
 fake-useragent
 aiohttp-socks
 curl-cffi
+gunicorn
 requests
 aiohttp
 uvloop
