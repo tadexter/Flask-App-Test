@@ -5,4 +5,4 @@ app = FastAPI()
 
 @app.get('/')
 def fetch_website():
-    return {'welcome': 'Done!'}
+    return {'welcome': 'Done 1!'}
