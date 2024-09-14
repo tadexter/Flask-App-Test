@@ -1,1 +1,1 @@
-web: uvicorn main:app --reload
+web: hypercorn main:app --bind \"[::]:$PORT\"
