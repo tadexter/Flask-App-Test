@@ -1,1 +1,1 @@
-web: python3 pyrogram_app.py & python3 telethon_app.py
+web: uvicorn main:app --reload

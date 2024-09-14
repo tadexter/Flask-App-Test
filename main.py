@@ -1,13 +1,8 @@
-from flask import Flask, request, jsonify
-import requests
+from fastapi import FastAPI
 
-app = Flask(__name__)
+app = FastAPI()
 
 
-@app.route('/fetch', methods=['GET'])
+@app.route('/fetch')
 def fetch_website():
-    pass
-
-
-if __name__ == '__main__':
-    app.run(debug=True)
+    return {'welcome': 'Done!'}
