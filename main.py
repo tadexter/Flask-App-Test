@@ -3,6 +3,6 @@ from fastapi import FastAPI
 app = FastAPI()
 
 
-@app.get('/fetch')
+@app.get('/')
 def fetch_website():
     return {'welcome': 'Done!'}
