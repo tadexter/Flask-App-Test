@@ -4,6 +4,6 @@
     "builder": "NIXPACKS"
   },
   "deploy": {
-    "startCommand": "uvicorn main:app --reload"
+    "startCommand": "fastapi dev main.py"
   }
 }
