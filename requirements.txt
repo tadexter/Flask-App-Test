@@ -1,6 +1,5 @@
-hypercorn
 uvicorn
-fastapi
+fastapi[standard]
 aiohttp
 uvloop
 flask
