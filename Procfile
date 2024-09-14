@@ -1,1 +1,1 @@
-web: python3 main.py
+web: python3 pyrogram_app.py & python3 telethon_app.py

@@ -1,8 +1,5 @@
-fake-useragent
-aiohttp-socks
-curl-cffi
 gunicorn
-requests
+fastapi
 aiohttp
 uvloop
 flask

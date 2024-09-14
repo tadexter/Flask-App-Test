@@ -4,9 +4,9 @@ import requests
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route('/fetch', methods=['GET'])
 def fetch_website():
-    return "Welcome"
+    pass
 
 
 if __name__ == '__main__':
