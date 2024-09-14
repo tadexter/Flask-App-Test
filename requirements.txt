@@ -1,4 +1,4 @@
-uvicorn
+hypercorn
 fastapi[standard]
 aiohttp
 uvloop
